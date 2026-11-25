@@ -122,14 +122,14 @@ python gen_jobs.py retry      # re-generates the configurations that did not rea
 
 | Axis | Parameter | Values (baseline in bold) |
 |---|---|---|
-| `kappa` | product-level procurement multiplier κp (κc = 1) | 1 / 2 / 5 / ∞ |
-| `kappac` | ingredient-level procurement multiplier κc (κp = ∞) | 1 / 2 / 5 / ∞ |
-| `budget` | budget ratio β | 0.05 / 0.15 / 0.3 / 0.5 / 0.7 / 1.0 |
-| `alpha` | CVaR confidence level α | 0.3 / 0.5 / 0.7 / 0.9 |
-| `pm` | substitution allowance ratio p_m | 0.2 / 0.4 / 0.6 / 0.8 |
-| `rhigh` | high-risk weight multiplier r | 1 / 3 / 5 / 7.5 / 10 |
-| `delta` | penalty coefficients (δ1, δ2) | δ1: 0.25 / 0.5 / 0.75, δ2: 0.75 / 1.0 / 1.5 / 2.0 |
-| `t2cap` | Tier 2 acceptance cap p_T2 | 0.1 / 0.2 / 0.3 (no cap) |
+| `kappa` | product-level procurement multiplier κp (κc = 1) | 1 / 2 / 5 / **∞** |
+| `kappac` | ingredient-level procurement multiplier κc (κp = ∞) | **1** / 2 / 5 / ∞ |
+| `budget` | budget ratio β | 0.05 / 0.15 / 0.3 / **0.5** / 0.7 / 1.0 |
+| `alpha` | CVaR confidence level α | 0.3 / **0.5** / 0.7 / 0.9 |
+| `pm` | substitution allowance ratio p_m | 0.2 / **0.4** / 0.6 / 0.8 |
+| `rhigh` | high-risk weight multiplier r | 1 / 3 / **5** / 7.5 / 10 |
+| `delta` | penalty coefficients (δ1, δ2) | δ1: 0.25 / **0.5** / 0.75, δ2: **0.75** / 1.0 / 1.5 / 2.0 |
+| `t2cap` | Tier 2 acceptance cap p_T2 | 0.1 / 0.2 / 0.3 (**no cap**) |
 | `--tier2 off` | Tier 2 prohibited | run for every axis |
 
 Fixed: γ = 5, λ = 1, scenario probabilities (0.5, 0.35, 0.15). The `retry` phase adds `--no-crossover` (crossover failed) or `--presolve off` (presolve declared infeasible at α = 0.9); for those runs only the objective value and the CVaR are reported in the paper.
@@ -273,14 +273,14 @@ python gen_jobs.py retry      # Optimal に到達しなかった構成を再生�
 
 | 軸 | パラメータ | 値（太字が基準） |
 |---|---|---|
-| `kappa` | 製品単位の調達可能倍率 κp（κc = 1） | 1 / 2 / 5 / ∞ |
-| `kappac` | 成分単位の調達可能倍率 κc（κp = ∞） | 1 / 2 / 5 / ∞ |
-| `budget` | 予算率 β | 0.05 / 0.15 / 0.3 / 0.5 / 0.7 / 1.0 |
-| `alpha` | CVaR 信頼水準 α | 0.3 / 0.5 / 0.7 / 0.9 |
-| `pm` | 代替許容率 p_m | 0.2 / 0.4 / 0.6 / 0.8 |
-| `rhigh` | 高リスク重み倍率 r | 1 / 3 / 5 / 7.5 / 10 |
-| `delta` | ペナルティ係数 (δ1, δ2) | δ1: 0.25 / 0.5 / 0.75, δ2: 0.75 / 1.0 / 1.5 / 2.0 |
-| `t2cap` | Tier 2 受入上限 p_T2 | 0.1 / 0.2 / 0.3（上限なし） |
+| `kappa` | 製品単位の調達可能倍率 κp（κc = 1） | 1 / 2 / 5 / **∞** |
+| `kappac` | 成分単位の調達可能倍率 κc（κp = ∞） | **1** / 2 / 5 / ∞ |
+| `budget` | 予算率 β | 0.05 / 0.15 / 0.3 / **0.5** / 0.7 / 1.0 |
+| `alpha` | CVaR 信頼水準 α | 0.3 / **0.5** / 0.7 / 0.9 |
+| `pm` | 代替許容率 p_m | 0.2 / **0.4** / 0.6 / 0.8 |
+| `rhigh` | 高リスク重み倍率 r | 1 / 3 / **5** / 7.5 / 10 |
+| `delta` | ペナルティ係数 (δ1, δ2) | δ1: 0.25 / **0.5** / 0.75, δ2: **0.75** / 1.0 / 1.5 / 2.0 |
+| `t2cap` | Tier 2 受入上限 p_T2 | 0.1 / 0.2 / 0.3（**上限なし**） |
 | `--tier2 off` | Tier 2 禁止 | 全軸で実行 |
 
 固定値: γ = 5、λ = 1、シナリオ確率 (0.5, 0.35, 0.15)。`retry` では `--no-crossover`（crossover 失敗時）または `--presolve off`（α = 0.9 で presolve が実行不可能と誤判定した場合）を付けます。これらの構成について論文では目的値と CVaR のみを報告しています。
