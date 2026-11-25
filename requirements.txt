@@ -1,0 +1,15 @@
+# Optimization model (run on SQUID with Python 3.8; the version pins below are
+# the ones used there; newer versions are expected to work as well)
+numpy<1.25
+scipy<1.11
+pandas<2.1
+highspy
+
+# Data preparation (data/*.ipynb, SQUID/tools/make_dataset.py)
+openpyxl
+requests
+jupyter
+
+# Figures and tables (SQUID/01_可視化_eng.ipynb, SQUID/tools/make_*.py)
+matplotlib
+geopandas
