@@ -29,7 +29,8 @@ The computations were run on the SQUID supercomputer (Cybermedia Center, Osaka U
 .
 ├── README.md / LICENSE / requirements.txt
 ├── data/                                   data preparation (raw sources are NOT included)
-│   └── 20260509_災害時における医療に緯度経度付加.ipynb   geocoding of the medical-relief hospitals
+│   ├── 20260509_災害時における医療に緯度経度付加.ipynb   geocoding of the medical-relief hospitals
+│   └── 20260805_実データ正規化_v3病院重複修正.ipynb      builds the model CSVs for A10B (nodes, demand, ...)
 └── SQUID/
     ├── 01_可視化_eng.ipynb                 all figures and tables of the paper
     ├── product_map.csv                     class_id -> product name / price / generic flag (3 groups)
@@ -179,7 +180,8 @@ MIT License. See `LICENSE`.
 .
 ├── README.md / LICENSE / requirements.txt
 ├── data/                                   データ作成（元データは含みません）
-│   └── 20260509_災害時における医療に緯度経度付加.ipynb   医療救護病院のジオコーディング
+│   ├── 20260509_災害時における医療に緯度経度付加.ipynb   医療救護病院のジオコーディング
+│   └── 20260805_実データ正規化_v3病院重複修正.ipynb      A10B のモデル用 CSV（拠点・需要など）を作成
 └── SQUID/
     ├── 01_可視化_eng.ipynb                 論文の全図表
     ├── product_map.csv                     class_id → 医薬品名・薬価・後発品フラグ（3薬効群）
